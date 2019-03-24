@@ -1,6 +1,7 @@
 <div style="text-align:center">
   <h1>Welcome to My House! </h1>
 </div>
+<app-goal-form></app-goal-form>
     <p style="font-size: 25px;">Goals for some time.</p>
     <ol>
       <div *ngFor='let goal of goals; let i=index'>
@@ -10,3 +11,4 @@
       </div>
     </ol>
     <p *ngIf='goals.length>5'><b>Why don't you finish the first five first?</b></p>
+   
