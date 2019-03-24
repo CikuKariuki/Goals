@@ -1,7 +1,7 @@
 <div style="text-align:center">
   <h1>Welcome to My House! </h1>
 </div>
-<app-goal-form></app-goal-form>
+<app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
     <p style="font-size: 25px;">Goals for some time.</p>
     <ol>
       <div *ngFor='let goal of goals; let i=index'>

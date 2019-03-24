@@ -1,18 +1,20 @@
 <div class="container-fluid">
     <div class="row">
-        <form>
+        <form (ngSubmit)='submitGoal()' #goalForm='ngForm'>
             <div class="form-group">
 
                 <label for="name">Name</label>
-                <input type="text" required class="form-control" id="name" name='name' [(ngModel)]="newGoal.name">
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="newGoal.name" #name="ngModel" required>
                 My name is {{newGoal.name}}
 
             </div>
             <div class="form-group">
 
                 <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="4" name='description' [(ngModel)]="newGoal.description" required></textarea>
+                <textarea class="form-control" id="description" rows="4" name='description' [(ngModel)]="newGoal.description" #name="ngModel"required></textarea>
                 Description {{newGoal.description}}
+                
+
                 
             </div>
             <div class="form-group">
