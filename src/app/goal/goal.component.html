@@ -1,0 +1,12 @@
+<div style="text-align:center">
+  <h1>Welcome to My House! </h1>
+</div>
+    <p style="font-size: 25px;">Goals for some time.</p>
+    <ol>
+      <div *ngFor='let goal of goals; let i=index'>
+       <li appStrikethrough>{{ goal.name}} by <i>{{goal.completeDate|date|uppercase}}</i></li>
+       <button (click)='toggleDetails(i)'>Toggle</button>
+       <app-goal-details *ngIf="goal.showDescription"[goal]='goal' (isComplete)='completeGoal($event,i)'></app-goal-details>
+      </div>
+    </ol>
+    <p *ngIf='goals.length>5'><b>Why don't you finish the first five first?</b></p>
