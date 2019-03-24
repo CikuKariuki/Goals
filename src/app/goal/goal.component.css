@@ -1,0 +1,11 @@
+h1{
+    color: aliceblue;
+    background-color: black;
+}
+button{
+    width: 100px;
+    border-radius: 50%
+  }
+  button:hover{
+      background-color: aquamarine
+  }
